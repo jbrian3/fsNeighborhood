@@ -6,9 +6,9 @@ It is a single map application of your neighborhood. I add functionality to this
 
 
 ### Screenshots
-![Page Details](/fsNeighborhood/img/details.png)
+![Page Details](/neighborhood&#32;map/img/details.png)
 
-![Locaiton Filter](/fsNeighborhood/img/filter.png)
+![Locaiton Filter](/neighborhood&#32;map/img/filter.png)
 
 ### Techniques
 - Interacting with API servers like The Google Maps APIs
