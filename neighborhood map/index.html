@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <title>Neighborhood Map</title>
+</head>
+
+<body>
+    <div class='nav-list column left' id='nav-list'>
+        <h2>Bart Locations</h2>
+        <input type='text' size=20 id='filter-content' data-bind="textinput: filter, valueUpdate: 'afterkeydown'" />
+        <button data-bind="">Filter</button>
+        <ul data-bind="foreach:filteredLocList">
+            <a href="">
+                <li data-bind="text:title, click:$parent.goToMarker"></li>
+            </a>
+        </ul>
+    </div>
+    <div class='map-list column right' id='map-list'>
+        <div class='nav-icon'>
+            <a href="#">
+                <i class="material-icons" data-bind="click:showOrHideList" id="list-burger">reorder</i>
+            </a>
+        </div>
+        <div class='gm' id='map'></div>
+
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/knockout-3.4.2.js"></script>
+    <script src="js/catmap.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1qRPEqqbb2vQ9WLeD6h06OKYv4RIdeYo&callback=initMap" onerror="googleError()">
+    </script>
+</body>
+
+</html>
